@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Home from './components/public/home';
+import Beds from './components/public/bedspage';
+import Help from './components/public/help';
+import Twitter from './components/public/twitter';
+import BloodPage from './components/public/blood';
+import GoogleForm from './components/public/googleform';
+import LoginMobile from './components/volunteer/volunteers';
+import Dashboard from './components/volunteer/dashboard';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <>
+        <Router>
+     
+
+            <Switch>
+              <Route exact path="/">
+                <BloodPage />
+              </Route>
+              <Route path="/home">
+                <BloodPage />
+              </Route>
+              <Route path="/beds">
+                <BloodPage />
+              </Route>
+               <Route path="/blood">
+                <BloodPage />
+              </Route>
+            <Route path="/addinfo">
+                <GoogleForm />
+              </Route>
+              <Route path="/help">
+                <Help />
+              </Route>
+              <Route path="/volunteers">
+                <LoginMobile />
+              </Route>
+              <Route path="/twitter">
+                <Twitter />
+              </Route>
+              <Route path="/dashboard">
+                <Dashboard />
+              </Route>
+            </Switch>
+
+        </Router>
+     </>
   );
 }
 

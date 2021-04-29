@@ -1,4 +1,4 @@
-# google Sheet as CMS
+# Google Sheet as CMS
 
 This is open source projet to use google sheet as backend
 
